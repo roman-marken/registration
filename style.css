@@ -1,0 +1,112 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+.message {
+    grid-column: span 2;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+
+.submit-btn {
+    grid-column: span 2;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2C3878;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1F285A;
+}
+
+
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .message, .submit-btn {
+        grid-column: span 1;
+    }
+}
